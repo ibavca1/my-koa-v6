@@ -11,5 +11,15 @@
     "url": "https://github.com/ibavca1/my-koa-v6.git"
   },
   "author": "Belonogov",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "koa": "^1.2.4",
+    "koa-router": "^5.4.0",
+    "koa-static": "^2.0.0",
+    "koa-webpack-dev-middleware": "^1.2.2",
+    "koa-webpack-hot-middleware": "^1.0.3"
+  },
+  "dependencies": {
+    "webpack": "^1.13.3"
+  }
 }
