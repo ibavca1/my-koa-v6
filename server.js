@@ -7,6 +7,7 @@ import webpack from 'webpack'
 import config from './webpack.config';
 
 /***********************************************************************/
+
 let compiler = webpack(config);
 
 const app = koa();
@@ -36,7 +37,7 @@ function *menu(){
     this.body = 'Menu';
 }
 
-function *index(){
+function *home(){
     this.body = 'content';
 }
 

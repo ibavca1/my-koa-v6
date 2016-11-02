@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,16 +14,22 @@
   "author": "Belonogov",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-transform-class-properties": "^6.18.0",
     "babel-polyfill": "^6.16.0",
+    "babel-preset-decorators-legacy": "^1.0.0",
     "babel-preset-es2016": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-stage-2": "^6.18.0",
     "babel-register": "^6.18.0",
     "koa": "^1.2.4",
-    "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
     "koa-webpack-dev-middleware": "^1.2.2",
     "koa-webpack-hot-middleware": "^1.0.3"
   },
   "dependencies": {
+    "koa-route": "^2.4.2",
     "koa-send": "^3.2.0",
     "webpack": "^1.13.3"
   }
