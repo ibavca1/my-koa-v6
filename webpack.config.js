@@ -1,6 +1,9 @@
 var path = require('path')
 var webpack = require('webpack')
 
+//This auto install npm
+//var NpmInstallPlugin = require('npm-install-webpack-plugin');
+
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
@@ -13,13 +16,29 @@ module.exports = {
       publicPath: '/static/'
     },
   plugins: [
+      new webpack.optimize.OccurenceOrderPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
+      //new  NpmInstallPlugin(),
       new webpack.NoErrorsPlugin()
     ],
-  module: {
+  module: {    
+	  preLoaders: [ 
+        {
+		    test: /\.js$/,
+		    loaders: ['eslint'],
+		    include: [
+				path.resolve(__dirname, "src"),
+			],
+		}
+      ],
       loaders: [
           {
             test: /\.js$/,
+	    plugins: ['transform-runtime'],
             loaders: ['babel-loader'],
+	    include : [
+		path.resolve(__dirname, "src")
+	      ],
             exclude: /node_modules/
           }
         ]
