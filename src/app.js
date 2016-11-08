@@ -8,13 +8,20 @@ class App extends Component {
 		super(props, context);
 	}
 	render(){
-		return <div>Hello from react from {this.props.user}.</div>
+	    const {user} = this.props.user;
+	    const {photos, year} = this.props.page;
+	    console.log(year);
+		return <div>
+			    <p>Привет, {user.name}! You are age: {user.age}</p>
+			    <p>Photos: {photos.length}, year: {year}</p>.
+			</div>
 	}
 }
 
 function mapStateToProps (state) {
   return {
-    user: state.user
+    user: state.user,
+    page: state.page
   }
 }
 

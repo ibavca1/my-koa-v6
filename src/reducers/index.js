@@ -1,8 +1,9 @@
-const initialState = {
-    user: 'undefined'
-};
+import {combineReducers} from 'redux';
+import user from './user';
+import page from './page';
 
-export default function userstate(state = initialState) {
-  return state;
-}
+export default combineReducers({
+	user,
+	page
+});
 
